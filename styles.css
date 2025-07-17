@@ -1,0 +1,145 @@
+span {
+   font-style: italic;
+}
+
+body {
+   margin: 0;
+   padding: 0;
+}
+
+.grid {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-auto-rows: 280px; /* hauteur fixe pour chaque ligne */
+   gap: 2em 0;
+}
+
+.card {
+   display: flex;
+   flex-direction: row;
+   height: 100%;
+   padding: 1em;
+   overflow: hidden;
+   box-sizing: border-box;
+   gap: 1em;
+}
+
+   .card.shift-right {
+      grid-column: 1 / span 2;
+   }
+
+   .card.shift-left {
+      grid-column: 2 / span 2;
+   }
+
+   .card.section-title {
+      grid-column: 1 / span 3;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      margin: 0;
+      height: 100%; /* même hauteur que les autres lignes */
+   }
+
+   .card .text {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding-left: 1em;
+   }
+
+   .card .image {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+
+   .card > * {
+      margin: 0.2em 0;
+   }
+
+   .card h2 {
+      margin: 0;
+   }
+
+   .card p {
+      margin-top: 0.2em;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      text-align: left;
+   }
+
+   .card img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      display: block;
+   }
+
+   .card.header {
+      text-align: center;
+      height: 180px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      grid-column: 1 / span 3;
+   }
+
+.grid > .card:nth-of-type(1) {
+   background-color: #FFF0A8;
+}
+
+.grid > .card:nth-of-type(3) {
+   background-color: #D87030;
+}
+
+.grid > .card:nth-of-type(5) {
+   background-color: #D87030;
+}
+
+
+.grid > .card:nth-of-type(6) {
+   background-color: #CEFF16;
+}
+
+.grid > .card:nth-of-type(7) {
+   background-color: #C0C0C0;
+}
+
+.grid > .card:nth-of-type(8) {
+   background-color: #D4CEE5;
+}
+
+.grid > .card:nth-of-type(10) {
+   background-color: #C0C0C0;
+}
+
+
+.grid > .card:nth-of-type(11) {
+   background-color: #CEF2FF;
+}
+
+.grid > .card:nth-of-type(13) {
+   background-color: #D87030;
+}
+
+.grid > .card:nth-of-type(14) {
+   background-color: #D4CEE5;
+}
+
+.grid > .card:nth-of-type(16) {
+   background-color: #CEF2FF;
+}
+
+.grid > .card:nth-of-type(17) {
+   background-color: #C0C0C0;
+}
+
+
+
